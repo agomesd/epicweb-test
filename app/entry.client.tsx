@@ -4,7 +4,7 @@ import { hydrateRoot } from 'react-dom/client'
 import * as Sentry from '@sentry/remix'
 
 Sentry.init({
-	dsn: 'https://979cc8d24dbd492ab557c06056f5842e:1530153a08574cf997eacf39f60ef801@o4505403412381696.ingest.sentry.io/4505403412447232',
+	dsn: process.env.SENTRY_DNS,
 	integrations: [
 		new Sentry.BrowserTracing({
 			// Set `tracePropagationTargets` to control for which URLs distributed tracing should be enabled

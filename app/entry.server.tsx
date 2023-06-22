@@ -11,7 +11,7 @@ import * as Sentry from '@sentry/remix'
 const ABORT_DELAY = 5000
 
 Sentry.init({
-	dsn: 'https://979cc8d24dbd492ab557c06056f5842e:1530153a08574cf997eacf39f60ef801@o4505403412381696.ingest.sentry.io/4505403412447232',
+	dsn: process.env.SENTRY_DNS,
 
 	// Set tracesSampleRate to 1.0 to capture 100%
 	// of transactions for performance monitoring.
